@@ -1,0 +1,5 @@
+pandas
+numpy
+matplotlib
+yfinance
+# polygon-api-client  # à activer si Polygon est utilisé

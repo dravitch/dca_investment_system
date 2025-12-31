@@ -1,0 +1,180 @@
+schema_version: "3.0-anthill"
+generated_date: "2025-12-31"
+generated_by: "human+copilot"
+certified_by: ""
+
+identity:
+  id: "dca-investment-system"
+  name: "DCA Investment System"
+  tagline: "Backtesting modulaire pour stratégies DCA et rebalancement"
+
+  role_in_anthill:
+    layer: "application"
+    function: "computation"
+    philosophy_alignment:
+      frugality: 0.6
+      resilience: 0.5
+      adaptability: 0.7
+      emergence: 0.4
+
+genesis:
+  practical_catalyst:
+    problem: "Difficulté à comparer proprement plusieurs stratégies DCA/rebalancement"
+    context: "Besoin d’un outil reproductible, simple, sans dépendances lourdes"
+    moment: "gradual"
+
+  key_constraint:
+    material: "Exécutions sur machines modestes (CPU only)"
+    theoretical: ""
+    organizational: "Projet individuel, besoin de simplicité"
+
+  breakthrough_insight:
+    what: "Séparer clairement données, stratégies, moteur et UI"
+    why_it_works: "Permet extension progressive sans dette technique"
+    validation: "Tests manuels sur plusieurs actifs (BTC, PAXG, OR, SPY)"
+
+  adaptive_parsimony_trace:
+    iteration_1: "Scripts Jupyter monolithiques"
+    iteration_2: "Refactor en modules Python séparés"
+    iteration_N: "Architecture modulaire avec stratégies plug‑and‑play"
+
+innovations:
+  protocols_formats: []
+  design_patterns:
+    - name: "Strategy Plug-in Pattern"
+      intent: "Ajouter facilement de nouvelles stratégies"
+      structure: "Fonctions step() + moteur générique"
+      example_use: "level1_dca, level2_rebalance"
+      anti_pattern: "Logique métier dispersée dans main.py"
+
+  metrics_signals:
+    - name: "ROI"
+      type: "performance"
+      range: "0-∞"
+      threshold_good: "positive"
+      threshold_critical: "negative"
+      signal_type: "strong"
+
+    - name: "Sharpe"
+      type: "quality"
+      range: "-∞-∞"
+      threshold_good: ">1.0"
+      threshold_critical: "<0.0"
+      signal_type: "weak"
+
+connections:
+  built_upon:
+    - project: "python-ecosystem"
+      aspect: "infrastructure"
+      dependency_type: "soft"
+      confidence: 1.0
+
+  enables: []
+
+  shares_patterns_with:
+    - project: "bome"
+      pattern: "block-based backtesting"
+      divergence: "DCA system reste simple, non distribué"
+
+  naturally_extends_to:
+    - domain: "portfolio-optimization"
+      why: "Les métriques et le moteur sont génériques"
+      confidence: 0.6
+
+  philosophical_resonance:
+    - project: "anthill"
+      shared_value: "adaptability"
+      manifestation: "Architecture modulaire et évolutive"
+
+reusability:
+  immediately_adoptable:
+    - component: "backtest_engine"
+      for: "Simuler des stratégies périodiques"
+      by: "Projets finance"
+      license: "MIT"
+      maturity: "beta"
+
+    - component: "metrics"
+      for: "Calculs ROI/Sharpe/volatilité"
+      by: "Analyses quantitatives"
+      license: "MIT"
+      maturity: "beta"
+
+  conceptually_transferable:
+    - concept: "Séparation stratégie/moteur"
+      applicable_when: "Plusieurs stratégies doivent coexister"
+      example_domain: "RL, simulations, trading"
+
+  teaching_value:
+    - lesson: "Commencer simple, séparer les responsabilités"
+    - audience: "Développeurs débutants"
+    - depth: "beginner"
+
+integration:
+  data_formats:
+    - format: "CSV"
+      schema: "TBD"
+      example: "TBD"
+
+  protocols:
+    - name: "None"
+      version: "1.0"
+      spec_url: ""
+
+  interfaces:
+    - type: "CLI"
+      endpoint: "python main.py"
+      authentication: "none"
+
+validation:
+  completeness_score: 0.42
+  factual_accuracy:
+    human_reviewed: false
+    reviewed_by: ""
+    review_date: ""
+    confidence: 0.0
+
+  integrity:
+    content_hash: ""
+    signature: ""
+
+  known_gaps:
+    - field: "integration.data_formats.schema"
+      reason: "Format non encore stabilisé"
+
+  last_updated: "2025-12-31"
+  update_frequency: "manual"
+
+metadata:
+  keywords: ["dca", "backtest", "finance", "python", "strategies"]
+  related_documents: []
+  search_hints:
+    - "Comment backtester une stratégie DCA"
+    - "Comment comparer plusieurs stratégies"
+  version_history:
+    - version: "1.0"
+      date: "2025-12-31"
+      changes: "Initial RKA file"
+
+reflection:
+  success_criteria:
+    - criterion: "Pouvoir ajouter une nouvelle stratégie en < 10 lignes"
+      target: "oui"
+      achieved: false
+
+  failures_learned:
+    - attempt: "Prototype Jupyter"
+      why_failed: "Non modulaire"
+      lesson: "Séparer moteur et stratégies"
+
+  future_vision:
+    next_phase: "Ajouter rebalancement avancé + visualisations"
+    dream_state: "Mini-framework éducatif pour stratégies DCA"
+
+  philosophical_note:
+    message: |
+      Ce projet existe pour rendre les stratégies DCA accessibles,
+      reproductibles et compréhensibles. Il sert de base simple mais
+      extensible pour explorer des idées financières sans dépendre
+      d’outils lourds ou opaques. S’il disparaissait, on perdrait un
+      exemple clair de modularité et de frugalité appliquée à la finance.

@@ -1,0 +1,44 @@
+# ============================
+# DCA Investment System
+# .gitignore
+# ============================
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.sqlite3
+
+# Virtual envs
+.venv/
+env/
+venv/
+
+# Nix
+result
+.nix-gc*
+.direnv/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local config
+config.env
+
+# Local scripts (non versionnés)
+git_auto_sync.py
+check_gitignore.sh
+gitinit.sh
+reset_publish.sh
+justfile
+
+# Articles / notes locales
+article_*.md
+notes/
